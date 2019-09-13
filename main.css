@@ -2,6 +2,11 @@ body{
     background-color: #F6EBE4;
 }
 
+button{
+    margin: 0 auto;
+    width: 8em;
+}
+
 h1{
     color: #780302;
     margin: 1em 2em;
