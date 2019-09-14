@@ -4,6 +4,8 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML = textToPrint;
 };
 
+
+
 const toCelsius =  () => {
 
 }
@@ -13,13 +15,19 @@ const toFahrenheit =  () => {
 }
 
 // Get a reference to the button element in the DOM
-const button = document.getElementById("converter");
+const convertButton = document.getElementById('convertBtn');
+const clearButton = document.getElementById('clearBtn');
 
 // This function should determine which conversion should
 // happen based on which radio button is selected.
 const determineConverter = (e) => {
-  console.log("event", e);
+  console.log("convert event", e);
 }
 
+const clearFormAndOutput = (e) => {
+    console.log("clear event", e);
+};
+
 // Assign a function to be executed when the button is clicked
-button.addEventListener("click", determineConverter);
+convertButton.addEventListener("click", determineConverter);
+clearButton.addEventListener("click", clearFormAndOutput);
