@@ -10,24 +10,24 @@
 </head>
 <body>
     <h1>Temperature Converter</h1>
-    <form class="col-sm-8 offset-2 container">
+    <form class="col-sm-8 offset-2 container" onsubmit="return false">
         <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Temperature</label>
           <div class="col-sm-10">
-            <input type="number" class="form-control" id="inputEmail3" placeholder="Enter a Number">
+            <input type="number" class="form-control" id="inputTemp" placeholder="Enter a Number">
           </div>
         </div>
         <fieldset class="form-group">
           <div class="row">
             <div class="col-sm-10 offset-2">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Celsius" required>
                 <label class="form-check-label" for="gridRadios1">
                   Celsius
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Fahrenheit" required>
                 <label class="form-check-label" for="gridRadios2">
                   Fahrenheit
                 </label>
@@ -39,7 +39,7 @@
         <div class="form-group row d-flex justify-content-around">
 
             <button type="button" id="clearBtn" class="btn btn-outline-info">Clear</button>
-            <button type="button" id="convertBtn" class="btn btn-info">Convert</button>
+            <button type="submit" id="convertBtn" class="btn btn-info">Convert</button>
         </div>
       </form>
     <div id="tempOuput">
