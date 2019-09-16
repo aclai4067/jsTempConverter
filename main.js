@@ -8,13 +8,13 @@ const printToDom = (divId, textToPrint) => {
 const toCelsius =  () => {
     const inputTempF = (document.getElementById('inputTemp').value - 32) * 5 / 9;
     const outputTempC= Math.round(inputTempF);
-    printToDom('tempOuput', `<h3>${outputTempC}&#176 Celsius</h3>`);
+    printToDom('tempOutput', `<h3>${outputTempC}&#176 Celsius</h3>`);
 }
 
 const toFahrenheit =  () => {
     const inputTempC = document.getElementById('inputTemp').value * 9 / 5 + 32;
     const outputTempF= Math.round(inputTempC);
-    printToDom('tempOuput', `<h3>${outputTempF}&#176 Fahrenheit</h3>`);
+    printToDom('tempOutput', `<h3>${outputTempF}&#176 Fahrenheit</h3>`);
 }
 
 // Get a reference to the button element in the DOM
@@ -31,8 +31,12 @@ const determineConverter = () => {
     }
 }
 
-const clearFormAndOutput = (e) => {
-    console.log("clear event", e);
+const clearFormAndOutput = () => {
+    document.getElementById('inputTemp').value = '';
+    printToDom('tempOutput', '');
+    for (let i = 1; i < 3; i++){
+        document.getElementById(`gridRadios${[i]}`).checked = false; 
+    };
 };
 
 // Assign a function to be executed when the button is clicked
