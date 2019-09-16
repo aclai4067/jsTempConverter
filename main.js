@@ -8,13 +8,13 @@ const printToDom = (divId, textToPrint) => {
 const toCelsius =  () => {
     const inputTempF = (document.getElementById('inputTemp').value - 32) * 5 / 9;
     const outputTempC= Math.round(inputTempF);
-    printToDom('tempOuput', `<h3>${outputTempC} Celsius</h3>`);
+    printToDom('tempOuput', `<h3>${outputTempC}&#176 Celsius</h3>`);
 }
 
 const toFahrenheit =  () => {
     const inputTempC = document.getElementById('inputTemp').value * 9 / 5 + 32;
     const outputTempF= Math.round(inputTempC);
-    printToDom('tempOuput', `<h3>${outputTempF} Fahrenheit</h3>`);
+    printToDom('tempOuput', `<h3>${outputTempF}&#176 Fahrenheit</h3>`);
 }
 
 // Get a reference to the button element in the DOM
