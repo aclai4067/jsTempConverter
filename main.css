@@ -1,20 +1,56 @@
 body{
-    background-color: #F6EBE4;
+    background: radial-gradient(transparent, rgb(250, 228, 188)) no-repeat center center fixed,
+                #F6EBE4 url("https://images.unsplash.com/photo-1503919483171-9ffc1debc390?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
 }
 
-button{
+body.cold{
+    background: radial-gradient(transparent, rgb(76, 88, 109)) no-repeat center center fixed,
+    #F6EBE4 url("https://images.unsplash.com/photo-1523835727565-6d4b35df4284?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.hot{
+    background: radial-gradient(transparent, rgb(109, 76, 76)) no-repeat center center fixed,
+    #F6EBE4 url("https://images.unsplash.com/photo-1456404836592-0f075c95d363?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80") no-repeat center center fixed;
+    background-size: cover;
+}
+
+button.col-sm-2{
     margin: 0 auto;
-    width: 8em;
+    width: auto;
+}
+
+#clearBtn:not(:hover){
+    background-color: #ffffff80;
+}
+
+#clearBtn:focus, #convertBtn:focus{
+    box-shadow: none;
 }
 
 h1{
-    color: #780302;
-    margin: 1em 2em;
+    font-family: 'Josefin Sans', 'Montserrat', sans-serif;
+    font-size: 3em;
+    background: -webkit-linear-gradient(left, rgb(6, 158, 247), rgb(252, 5, 54), rgb(6, 158, 247));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff80;
+    margin: 1em auto;
+    text-shadow: 2px 2px #03030340;
+    
 }
 
 h3{
     color: #2BCA88;
-    font-size: 4em;
+    font-size: 3em;
     margin: 1em;
     text-align: center;
+    text-shadow: 2px 2px #03030340;
+}
+
+.tempBody{
+    background-color: #ffffff80;
+    border-radius: 5px;
+    padding: 2em 0;
 }
